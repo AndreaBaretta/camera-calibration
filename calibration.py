@@ -52,7 +52,7 @@ for (name, v) in zip(['ret', 'mtx', 'dist', 'rvecs', 'tvecs'], calib_output):
             print "ERROR: ", name, v
             raise exn
 
-img = cv.imread('2018-11-28-154555.jpg')
+#img = cv.imread('2018-11-25-130553.jpg')
 h,  w = img.shape[:2]
 newcameramtx, roi = cv.getOptimalNewCameraMatrix(mtx, dist, (w,h), 1, (w,h))
 dst = cv.undistort(img, mtx, dist, None, newcameramtx)
